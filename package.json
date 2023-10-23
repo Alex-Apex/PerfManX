@@ -1,0 +1,25 @@
+{
+  "name": "perfmanx",
+  "version": "1.0.0",
+  "description": "Perfman with htmx",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Apex/PerfManX.git"
+  },
+  "keywords": [
+    "perfman"
+  ],
+  "author": "Alex Gomez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-Apex/PerfManX/issues"
+  },
+  "homepage": "https://github.com/Alex-Apex/PerfManX#readme"
+}
