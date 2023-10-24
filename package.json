@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "test"
+    "test": "jest",
+    "sass": "node-sass -w src/sass/ -o dist/css",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -24,12 +26,15 @@
   "homepage": "https://github.com/Alex-Apex/PerfManX#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
     "handlebars": "^4.7.8",
+    "htmx.org": "^1.9.6",
     "mssql": "^10.0.1",
     "node-sass": "^9.0.0"
   },
   "devDependencies": {
     "eslint": "^8.52.0",
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
   }
 }
