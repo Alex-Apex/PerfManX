@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "jest",
-    "sass": "node-sass -w src/sass/ -o dist/css",
+    "sass": "node-sass -w src/sass/ -o public/css",
     "dev": "nodemon app.js"
   },
   "repository": {
