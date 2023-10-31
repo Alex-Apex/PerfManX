@@ -1,11 +1,11 @@
         <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
-            <h2 hx-get="/test" hx-swap="innerHTML">{{message}}</h2>            
+            <h2 hx-get="/test" hx-swap="innerHTML">{{message}}</h2>   
             <div>
                 <!--img src="path_to_profile_image.jpg" alt="Profile Image" width="50"-->
                 <span>Alex Gomez</span>
-                {{#each sidebarMenuOptions}}
+                {{#each sidebarMenuOptions}}              
                     <div class="MenuItem">{{label}}</div>
                 {{/each}}
             </div>
@@ -17,18 +17,20 @@
             <div class="widget">
                 <!-- Total Sales Widget -->
                 <h2>Organizational Information</h2>
-                <p>300 employees</p>
-            </div>
-            <div class="widget">
-                
-                <h2>Digital Product Practices</h2>
-                <ul>
-                    <li>.Net</li>
-                    <li>Java</li>
-                    <li>Mobile</li>
-                    <li>Web GUI</li>
-                </ul>
-                <!-- Add graph or other content here -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th><th>Name</th><th>Title</th><th>Username</th><th>Pool</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each employees}}
+                        <tr>
+                            <td>{{id}}</td><td>{{name}}</td><td>{{current_title}}</td><td>{{username}}</td><td>{{pool_id}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
             </div>
             <!-- Add more widgets or content as needed -->
         </div>

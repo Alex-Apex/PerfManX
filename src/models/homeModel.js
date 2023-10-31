@@ -15,7 +15,9 @@ async function fetchEmployees(onlyActive) {
     console.error('fetchEmployees Exception:', error);
     throw error;
   } finally {
-    await pool.close();
+    if(pool){
+        await pool.close();
+    }
   }
 }
 
@@ -164,11 +166,25 @@ async function fetchData(){
     // Return this data to be used in the controller
     //return db.query('SELECT * FROM some_table'); // Just an example
     // This is only for test
-    return  {
-        sidebarMenuOptions:[{label:'MyOrg',route:''},{label:'Champions Friday', route:''},{label:'SkillTree', route:''},{label:'ConsultantDeeds',route:''}],            
-        message: 'PerfManX'
-    };
+    let model = {};
+    model.message = 'PerfManX';
+    model.sidebarMenuOptions = await getSidebarMenuOptions();
+    model.employees = await fetchEmployees(true);
+    return  model;
 };
+
+/**
+ * Return the options for the sidebar menu 
+ * 
+*/
+async function getSidebarMenuOptions() {
+    return [
+        {label:'MyOrg', route:''},
+        {label:'Champions Friday', route:''},
+        {label:'SkillTree', route:''},
+        {label:'ConsultantDeeds',route:''}
+    ];
+}
 
 async function saveData(data){
     // Code to save data from the home page
