@@ -4,10 +4,10 @@
             <h2 hx-get="/test" hx-swap="innerHTML">{{message}}</h2>            
             <div>
                 <!--img src="path_to_profile_image.jpg" alt="Profile Image" width="50"-->
-                <span>Alex Gomez</span>                
-                <div class="MenuItem">Organizational View</div>
-                <div class="MenuItem">Champion's Friday</div>
-                <div class="MenuItem">Consultant's Deeds</div>
+                <span>Alex Gomez</span>
+                {{#each sidebarMenuOptions}}
+                    <div class="MenuItem">{{label}}</div>
+                {{/each}}
             </div>
         </div>
         
