@@ -1,6 +1,5 @@
 const {appConnectionPoolPromise} = require('../db/db');
-const sql = require('mssql');
-const queries = require('../resources/queries');
+const queries = require('../db/queries');
 
 let pool;
 
