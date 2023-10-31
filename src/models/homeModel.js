@@ -179,10 +179,10 @@ async function fetchData(){
 */
 async function getSidebarMenuOptions() {
     return [
-        {label:'MyOrg', route:''},
-        {label:'Champions Friday', route:''},
-        {label:'SkillTree', route:''},
-        {label:'ConsultantDeeds',route:''}
+        {label:'MyOrg', route:'/myOrg'},
+        {label:'Champions Friday', route:'/'},
+        {label:'SkillTree', route:'/'},
+        {label:'ConsultantDeeds',route:'/'}
     ];
 }
 

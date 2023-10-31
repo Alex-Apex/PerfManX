@@ -6,13 +6,13 @@
                 <!--img src="path_to_profile_image.jpg" alt="Profile Image" width="50"-->
                 <span>Alex Gomez</span>
                 {{#each sidebarMenuOptions}}              
-                    <div class="MenuItem">{{label}}</div>
+                    <div class="MenuItem" hx-get="{{route}}" hx-target="#main-content">{{label}}</div>
                 {{/each}}
             </div>
         </div>
         
         <!-- Main Content -->
-        <div class="main-content">
+        <div id="main-content" class="main-content">
             Screen Name
             <div class="widget">
                 <!-- Total Sales Widget -->
