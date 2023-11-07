@@ -1,37 +1,28 @@
-        <div class="container">
-        <!-- Sidebar -->
+<div class="container">
         <div class="sidebar">
             <h2 hx-get="/test" hx-swap="innerHTML">{{message}}</h2>   
             <div>
                 <!--img src="path_to_profile_image.jpg" alt="Profile Image" width="50"-->
                 <span>Alex Gomez</span>
-                {{#each sidebarMenuOptions}}              
-                    <div class="MenuItem" hx-get="{{route}}" hx-target="#main-content">{{label}}</div>
-                {{/each}}
+                 <div id="sidebarMenu" class="sidebarMenu" hx-swap-oob="innerHTML" hx-target="#sidebarMenu">
+                    {{#each sidebarMenuOptions}}              
+                        <div class="MenuItem" hx-get="{{route}}" hx-target=".main-content" hx-swap="outerHTML">{{label}}</div>
+                    {{/each}}
+                </div>
             </div>
         </div>
-        
-        <!-- Main Content -->
         <div id="main-content" class="main-content">
-            Screen Name
             <div class="widget">
-                <!-- Total Sales Widget -->
-                <h2>Organizational Information</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th><th>Name</th><th>Title</th><th>Username</th><th>Pool</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{#each employees}}
-                        <tr>
-                            <td>{{id}}</td><td>{{name}}</td><td>{{current_title}}</td><td>{{username}}</td><td>{{pool_id}}</td>
-                        </tr>
-                        {{/each}}
-                    </tbody>
-                </table>
+               Projects Widget
             </div>
-            <!-- Add more widgets or content as needed -->
+            <div class="widget">
+               Practices Widget
+            </div>
+            <div class="widget">
+               Employees Widgets
+            </div>
+            <div class="widget">
+               Other stuff and links to other tools?
+            </div>
         </div>
     </div>

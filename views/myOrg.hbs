@@ -1,0 +1,26 @@
+
+<div id="sidebarMenu" class="sidebarMenu" hx-swap-oob="innerHTML" hx-target="#sidebarMenu">
+    {{#each sidebarMenuOptions}}
+        <div class="MenuItem" hx-get="{{route}}" hx-target=".main-content" hx-swap="outerHTML">{{label}}</div>
+    {{/each}}
+</div>
+<div id="main-content" class="main-content">
+    <div class="widget">    
+        <button hx-get="/modal" hx-target="body" hx-swap="beforeend">Open a Modal</button>
+        <h2>Organizational Information</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>Name</th><th>Title</th><th>Username</th><th>Pool</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each employees}}
+                <tr>
+                    <td>{{id}}</td><td>{{name}}</td><td>{{current_title}}</td><td>{{username}}</td><td>{{pool_id}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
