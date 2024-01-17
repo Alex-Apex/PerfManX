@@ -10,7 +10,7 @@ let pool;
   async function getSidebarMenuOptions() {
     return [
         {label:'MyOrg', route:'/myOrg'},
-        {label:'Champions Friday', route:'/champions'},
+        {label:'Champions Friday', route:'/foc'},
         {label:'SkillTree', route:'/SkillsTree'},
         {label:'ConsultantDeeds',route:'/Deeds'}
     ];

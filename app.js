@@ -46,6 +46,7 @@ app.use(
     
     app.use('/', homeRoutes);
     app.use('/myOrg', myOrgRoutes);
+    app.use('/foc', championsRoutes);
     // Handle 404 errors
     app.use((req, res, next) => {
         res.status(404).send("Sorry, that route doesn't exist.");

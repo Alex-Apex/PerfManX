@@ -5,7 +5,7 @@ const queries = {
     GET_ALL_SKILLS: `SELECT * FROM [dbo].[Skills]`,
     GET_ALL_PROJECTS: `SELECT * FROM [dbo].[Projects]`,
     GET_FRIDAY_CHAMPIONS: `SELECT * FROM [dbo].[ChampionsFriday]`,
-    GET_FRIDAY_CHAMPIONS_LEADERBOARD: `SELECT * FROM [dbo].[ChampionsFridayLeaderboard]`,
+    GET_FRIDAY_CHAMPIONS_LEADERBOARD: `SELECT * FROM [dbo].[ChampionsFridayLeaderboard] ORDER BY [Total Badges] DESC`,
     GET_EMPLOYEE_MANAGEMENT_EVENTS: `SELECT * FROM [dbo].[PerformanceEventTypes]`,
     GET_ORGS_EMPLOYEES:`WITH EmployeeHierarchy AS
     (

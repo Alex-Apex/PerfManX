@@ -1,0 +1,22 @@
+<table>
+    <caption>Leaderboard</caption>
+    <thead>
+        <tr>
+            {{#if this.[0]}}
+                {{#each this.[0] as |value key|}}
+                    <th>{{key}}</th>
+                {{/each}}
+            {{/if}}
+        </tr>
+    </thead>
+    <tbody>
+        {{#each this}}
+            <tr>
+                {{#each this as |value key|}}
+                    <td>{{value}}</td>
+                {{/each}}
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+

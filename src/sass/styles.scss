@@ -20,6 +20,12 @@ body {
         cursor: pointer;
         border-radius: 8px;
     }
+
+    .MenuItem a {
+        color:white;
+        text-decoration: none;
+    }
+    
     .MenuItem:hover {
         background-color: #ffffff19;
     }
