@@ -8,5 +8,6 @@ router.use('/foc', (req, res) => {
 });
 
 router.get('/', championsFridayController.getHomePage);
-
+router.get('/register_champion', championsFridayController.getChampionRegistrationPage);
+router.post('/register_champion', championsFridayController.postChampionRegistration);
 module.exports = router;

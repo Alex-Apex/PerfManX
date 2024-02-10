@@ -1,0 +1,94 @@
+<div class="container">
+        <div class="sidebar">
+            <h2 hx-get="/test" hx-swap="innerHTML">{{message}}</h2>   
+            <div>
+                <!--img src="path_to_profile_image.jpg" alt="Profile Image" width="50"-->
+                <span>Alex Gomez</span>
+                 <div id="sidebarMenu" class="sidebarMenu">
+                    {{#each sidebarMenuOptions}}              
+                        <div class="MenuItem">
+                            <a href="{{route}}">{{label}}</a>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <div id="main-content" class="main-content">
+            <div class="widget">
+                <div>This Badge will apply for:{{currentQuarter}} </div>
+
+                <form action="/foc/register_champion" method="post">
+                    <div class="capture_form_row">
+                        <label for="txtEmployeeUsername">Employee Username</label>
+                        <input type="text" name="txtEmployeeUsername" id="txtEmployeeUsername">
+                    </div>
+                    <div class="capture_form_row">
+                        <label for="txtEventDescription">Recognition Event Description:</label>                        
+                        <textarea name="txtEventDescription" id="txtEventDescription" cols="100" rows="3">Recount the context under which the employee was recognized as remarkable.</textarea>
+                    </div>
+                    <div class="capture_form_columns">
+                        <div>
+                            <h3>Professional Excellence</h3>
+                            <div class="capture_form_columns">
+                                <label for="chkChampion">Champion Badge</label>                        
+                                <input type="checkbox" name="chkChampion" id="chkChampion">
+                            </div>
+                            <div class="capture_form_columns">
+                                <label for="chkIntegrity">Integrity Badge</label>                        
+                                <input type="checkbox" name="chkIntegrity" id="chkIntegrity">
+                            </div>
+                            <div class="capture_form_columns">
+                                <label for="chkMentor">Mentor Badge</label>                        
+                                <input type="checkbox" name="chkMentor" id="chkMentor">
+                            </div>
+                            <div class="capture_form_columns">
+                                <label for="chkPro">Pro Badge</label>                        
+                                <input type="checkbox" name="chkPro" id="chkPro">
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Collaborative Sinergy</h3>
+                            <div class="capture_form_columns">
+                                <label for="chkTrailblazer">Trailblazer Badge</label>                        
+                                <input type="checkbox" name="chkTrailblazer" id="chkTrailblazer">
+                            </div>
+                            <div class="capture_form_columns">
+                                <label for="chkCollaborator">Collaborator Badge</label>                        
+                                <input type="checkbox" name="chkCollaborator" id="chkCollaborator">
+                            </div>
+                            <div class="capture_form_columns">
+                                <label for="chkReliable">Realiable Badge</label>  
+                                <input type="checkbox" name="chkReliable" id="chkReliable">
+                            </div>
+                            <div class="capture_form_columns">
+                                <label for="chkVisionary">Visionary Badge</label>                        
+                                <input type="checkbox" name="chkVisionary" id="chkVisionary">
+                            </div>
+                        </div>   
+                        <div>
+                            <h3>Technical Mastery</h3>
+                            <div class="capture_form_columns">
+                                <label for="chkAdaptive">Adaptive Badge</label>                        
+                                <input type="checkbox" name="chkAdaptive" id="chkAdaptive">
+                            </div>
+                            <div class="capture_form_columns">
+                                <label for="chkExpert">Expert Badge</label>                        
+                                <input type="checkbox" name="chkExpert" id="chkExpert">
+                            </div>
+                            <div class="capture_form_columns">
+                                <label for="chkDeepDiver">Deep Diver Badge</label>                        
+                                <input type="checkbox" name="chkDeepDiver" id="chkDeepDiver">
+                            </div>
+                            <div class="capture_form_columns">
+                                <label for="chkVersatile">Versatile Badge</label>
+                                <input type="checkbox" name="chkVersatile" id="chkVersatile">
+                            </div>
+                        </div>
+
+                    </div>
+                    <br/>
+                    <button hx-post="/foc/register_champion" hx-target="body" hx-swap="outerHTML">Register Champion Badge</button>               
+                </form>
+            </div>
+        </div>
+    </div>

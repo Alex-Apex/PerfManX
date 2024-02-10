@@ -47,3 +47,14 @@ body {
     color: #ffffff;
     /* Add other styles as needed */
 }
+
+.capture_form_row {
+    display: flex;
+    flex-direction: column;
+}
+
+.capture_form_columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

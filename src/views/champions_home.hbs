@@ -4,7 +4,7 @@
             <div>
                 <!--img src="path_to_profile_image.jpg" alt="Profile Image" width="50"-->
                 <span>Alex Gomez</span>
-                 <div id="sidebarMenu" class="sidebarMenu" hx-swap-oob="innerHTML" hx-target="#sidebarMenu">
+                 <div id="sidebarMenu" class="sidebarMenu">
                     {{#each sidebarMenuOptions}}              
                         <div class="MenuItem">
                             <a href="{{route}}">{{label}}</a>
@@ -15,6 +15,8 @@
         </div>
         <div id="main-content" class="main-content">
             <div class="widget">
+                <div>You are seeing:{{currentQuarter}} </div>
+                <button hx-get="/foc/register_champion" hx-target="body" hx-swap="outerHTML">Register Champion Badge</button>
                {{> champions_leaderboard leaderBoard}}
             </div>
         </div>
