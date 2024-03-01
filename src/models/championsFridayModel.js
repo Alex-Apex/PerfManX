@@ -15,7 +15,7 @@ let pool;
     ];
 };
 
-const getChampionsFridayLeaderboard = async () => {
+const getChampionsFridayLeaderboard = async () => { //TODO perhaps this belongs to a data access layer
   try {
     pool = await appConnectionPoolPromise.connect();
     const result = await pool.request().query(queries.GET_FRIDAY_CHAMPIONS_LEADERBOARD);

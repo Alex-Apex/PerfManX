@@ -16,7 +16,8 @@
         <div id="main-content" class="main-content">
             <div class="widget">
                 <div>You are seeing:{{currentQuarter}} </div>
-                <button hx-get="/foc/register_champion" hx-target="body" hx-swap="outerHTML">Register Champion Badge</button>
+                <md-filled-button hx-get="/foc/register_champion" hx-target="body" hx-swap="outerHTML">Register Champion's Badges</md-filled-button>
+                
                {{> champions_leaderboard leaderBoard}}
             </div>
         </div>
